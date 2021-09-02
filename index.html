@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lerato's Contact Form</title>
+    <link rel="stylesheet" href="./login.css" />
+  </head>
+  <body>
+    <div id="form">
+      <form action="./index.html" method="POST" class="form"></form>
+      <form>
+        <h2>Welcome back!</h2>
+        <h1>Log in</h1>
+
+        <div class="contact-info">
+          <label class="contact-label" for="username"> username: </label>
+          <input
+            class="contact-input"
+            type="username"
+            name="username"
+            id="username"
+            required
+            placeholder="enter username"
+          />
+        </div>
+        <div class="contact-info">
+          <label class="contact-label" for="password">password: </label>
+          <input
+            class="contact-input"
+            type="text"
+            name="password"
+            id="password"
+            required
+            placeholder="enter password"
+          />
+        </div>
+
+        <button class="contact-input" id="login-button" type="submit">
+          log in
+        </button>
+        <p class="message">
+          Not registered? <a href="/sign up.html">Create an account</a>
+        </p>
+      </form>
+    </div>
+  </body>
+  <script src="./login.js"></script>
+</html>

@@ -1,0 +1,228 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.landing {
+  min-width: 300px;
+  display: flex;
+  align-items: stretch;
+  padding: 30px;
+  background-color: black;
+  color: white;
+}
+
+.landing img {
+  width: 50%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.landing-content {
+  width: 50%;
+  min-height: 100%;
+  background-image: url("https://media3.giphy.com/media/YTN64c90184auqjBnx/giphy.gif?cid=ecf05e47zakf38r4e1ayvvhfjt7sjc86bvc2ox2o4f1mya9y&rid=giphy.gif&ct=g");
+  padding: 30px;
+
+  text-align: end;
+
+  top: 50%;
+  left: 50%;
+}
+
+header {
+  height: 56px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  background-color: grey;
+}
+h1 {
+  color: aliceblue;
+}
+
+#social {
+  height: 60px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: left;
+  background-color: lightblue;
+}
+#social-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+#cart-icon {
+  display: flex;
+  justify-content: right;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  padding: 20px;
+  margin-top: 40px;
+  background: rgba(41, 73, 163, 0.55);
+  box-shadow: 0 8px 32px 0 rgba(37, 48, 206, 0.37);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 10px;
+  border: 1px solid rgba(35, 34, 148, 0.18);
+}
+
+.container-heading {
+  width: 100%;
+  text-align: center;
+}
+
+.project-card {
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  width: 50%;
+  min-width: 300px;
+  overflow: hidden;
+  border-radius: 5px;
+  flex: 0 1 150px; /*  No stretching: */
+  margin: 1%;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+img {
+  width: 100%;
+}
+
+.card-heading,
+.card-subtitle,
+.card-description {
+  margin-bottom: 10px;
+}
+
+.card-buttons {
+  display: flex;
+}
+
+.button {
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: black;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: all 0.3s linear;
+  width: 49%;
+  margin-right: 1%;
+}
+
+.button:hover {
+  font-size: 1.1em;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  align-items: center;
+}
+.navbar img {
+  height: 15vh;
+}
+.logo {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.active {
+  padding: 15px;
+  margin: 5px;
+  text-decoration: none;
+  background: red;
+  backdrop-filter: blur(16.5px);
+  -webkit-backdrop-filter: blur(16.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.navi {
+  margin-left: 0%;
+  margin-right: 0%;
+  top: -2px;
+  position: fixed;
+  z-index: 999;
+  padding-left: 80px;
+}
+
+#cart2 {
+  content: "";
+  position: absolute;
+  height: 100vh;
+  width: 500px;
+  top: 0%;
+  right: 100%;
+  background-image: linear-gradient(-45deg, blue 0%, lightblue 100%);
+  transition: 1.5s ease-in-out;
+  z-index: 6;
+  color: white;
+}
+
+#cart2.active {
+  right: 0%;
+}
+.cart2 {
+  position: fixed;
+  z-index: 999;
+  right: 10px;
+  top: 58px;
+}
+#cart2 p {
+  display: list-item;
+  justify-content: space-around;
+  padding-top: 50px;
+}
+
+#form {
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  padding: 5% 10%;
+  border-bottom: red;
+  background-color: grey;
+}
+
+.contact-label {
+  display: none;
+}
+.contact-input {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 5% 10%;
+  background: rgba(0, 0, 0, 0.75);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  border-radius: 4px;
+  border: none;
+  color: rgb(226, 216, 216);
+  outline: none;
+}
+.contact-input ::placeholder {
+  text-transform: uppercase;
+}
