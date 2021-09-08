@@ -173,7 +173,7 @@ img {
   width: 500px;
   top: 0%;
   right: 100%;
-  background-image: linear-gradient(-45deg, blue 0%, lightblue 100%);
+  background-image: black;
   transition: 1.5s ease-in-out;
   z-index: 6;
   color: white;
@@ -196,7 +196,8 @@ img {
 
 #form {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+
   align-items: left;
   padding: 5% 10%;
   border-bottom: red;
@@ -225,4 +226,13 @@ img {
 }
 .contact-input ::placeholder {
   text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+  .landing {
+    flex-direction: column-reverse;
+  }
+  .landing-content {
+    max-width: 500px;
+  }
 }
