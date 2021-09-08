@@ -7,26 +7,23 @@ function register() {
   console.log(first_name, last_name, username, password);
 
   //   SEND DATA TO API
-  fetch("https://enigmatic-mesa-96671.herokuapp.com/user-registration/", {
+  fetch("http://127.0.0.1:5000/user-registration/", {
     method: "POST",
     body: JSON.stringify({
-      first_name,
-      last_name,
-      username,
-      password,
+      first_name: first_name,
+      last_name: last_name,
+      username: username,
+      password: password,
     }),
     headers: {
-      "Content-type": "application/json; charset=UTF-8",
+      "Content-type": "application/json",
     },
   })
     .then((res) => res.json())
     .then((res) => {
-      if (res.status_code == 201) {
-        document.querySelector("#error").innerHTML =
-          "You have successfully registered, please sign in to continue";
-        setTimeout(function () {
-          window.location = "./index.html";
-        }, 3000);
-      }
+      console.log(res);
+      setTimeout(function () {
+        window.location = "./index.html";
+      }, 3000);
     });
 }
