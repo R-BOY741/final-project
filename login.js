@@ -4,7 +4,7 @@ function login() {
   let username = document.querySelector("#username").value;
   let password = document.querySelector("#password").value;
 
-  fetch(" http://127.0.0.1:5000/user-registration/", {
+  fetch(" https://enigmatic-mesa-96671.herokuapp.com//user-registration/", {
     method: "PATCH",
     body: JSON.stringify({
       username,

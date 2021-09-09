@@ -7,7 +7,7 @@ function register() {
   console.log(first_name, last_name, username, password);
 
   //   SEND DATA TO API
-  fetch("http://127.0.0.1:5000/user-registration/", {
+  fetch("https://enigmatic-mesa-96671.herokuapp.com//user-registration/", {
     method: "POST",
     body: JSON.stringify({
       first_name: first_name,
