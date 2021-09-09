@@ -235,4 +235,8 @@ img {
   .landing-content {
     max-width: 500px;
   }
+  #cart2 {
+    display: flex;
+    justify-content: flex-end;
+  }
 }

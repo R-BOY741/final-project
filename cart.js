@@ -4,6 +4,7 @@ fetch("https://enigmatic-mesa-96671.herokuapp.com/get-items/", {
   .then((res) => res.json())
   .then((data) => {
     localStorage.products = JSON.stringify(data.data);
+    console.log(item);
   });
 
 //CREATING CARD
@@ -12,16 +13,17 @@ function createCard(card) {
   let cardContainer = document.querySelector(".container");
   card.forEach((product) => {
     cardContainer.innerHTML += `
-    <div class="project-card">
-    <img src="./dell.jpg" alt="Image of Contact Page" class="img" />
+  <div class="project-card">
+  <img src="${product[5]}" alt="Image of Contact Page" class="img" />
     <div>
-      <h2 class="card-heading">Laptop</h2>
-      <h3 class="card-subtitle">Dell</h3>
-      <p class="card-description">vostro 15 3000 series<br /></p>
+      <h2 class="card-heading">${product[3]}</h2>
+      <h3 class="card-subtitle">${product[1]}</h3>
+      <p class="card-description">${product[4]}</p>
+      
       <!--Buttons #1-->
       <div class="card-buttons">
-        <a href="" target="_blank" class="button">Add to cart</a>
-        <a href="" target="_blank" class="button">R11 700</a>
+        <a  class="button">Add to cart</a>
+        <a href="" target="_blank" class="button">R${product[2]}</a>
       </div>
     </div>
   </div>
