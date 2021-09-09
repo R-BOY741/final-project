@@ -1,13 +1,14 @@
-let signInButton = document.querySelector(".form");
+let signInButton = document.querySelector("#login-button");
 
-function login(username, password) {
-  console.log(username);
-  console.log(password);
+function login() {
+  let username = document.querySelector("#username").value;
+  let password = document.querySelector("#password").value;
+
   fetch(" http://127.0.0.1:5000/user-registration/", {
     method: "PATCH",
     body: JSON.stringify({
-      username: `${username}`,
-      password: `${password}`,
+      username,
+      password,
     }),
     headers: {
       "Content-Type": "application/json",
@@ -16,6 +17,9 @@ function login(username, password) {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      window.location.href = "./main.html";
+      if (data.data) {
+        localStorage.setItem("user", JSON.stringify(data.data));
+        window.location.href = "./main.html";
+      }
     });
 }
