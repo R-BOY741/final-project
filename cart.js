@@ -3,14 +3,23 @@ fetch("https://enigmatic-mesa-96671.herokuapp.com/get-items/", {
 })
   .then((res) => res.json())
   .then((data) => {
+    console.log(data);
+    let products = data.data;
+
     localStorage.products = JSON.stringify(data.data);
+
+    let container = document.querySelector(".container");
+    container.innerHTML = "";
+
+    products.forEach((product) => (container.innerHTML += createCard(product)));
+
     console.log(item);
   });
 
 //CREATING CARD
 
 function createCard(card) {
-  let cardContainer = document.querySelector(".container");
+  let cardContainer = document.querySelector(".project-card");
   card.forEach((product) => {
     cardContainer.innerHTML += `
   <div class="project-card">
@@ -22,8 +31,8 @@ function createCard(card) {
       
       <!--Buttons #1-->
       <div class="card-buttons">
-        <a  class="button">Add to cart</a>
-        <a href="" target="_blank" class="button">R${product[2]}</a>
+        <button onclick="addToCart(${product[0]})" class="button">Add to cart</button>
+        <button class="button">R${product[2]}</button>
       </div>
     </div>
   </div>
