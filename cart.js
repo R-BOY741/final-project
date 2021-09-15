@@ -46,7 +46,7 @@ function createCard(product) {
 // createCard(JSON.parse(localStorage.getItem("products")));
 
 function addToCart(id) {
-  fetch(`https://enigmatic-mesa-96671.herokuapp.com/get-items/${id}/`, {
+  fetch(`   https://enigmatic-mesa-96671.herokuapp.com/get-items/${id}/`, {
     method: "GET",
   })
     .then((res) => res.json())
@@ -67,6 +67,8 @@ function showCartItems() {
 
   container.innerHTML = "";
   cartProducts.forEach((item) => (container.innerHTML += createCart(item)));
+
+  getTotal();
 }
 
 function createCart(cartItem) {
